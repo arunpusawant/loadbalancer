@@ -56,7 +56,7 @@ LoadBalancer.prototype._start = function () {
     });
   }
 
-  this._server.listen(this.sourcePort);
+  this._server.listen(this.sourcePort,'127.0.0.1');
   
   if (this.downgradeToUser && process.setuid) {
     try {
